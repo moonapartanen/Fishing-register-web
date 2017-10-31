@@ -31,13 +31,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css'); ?>
     <?= $this->Html->css('https://fonts.googleapis.com/css?family=Titillium+Web'); ?>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');?>
-    <?= $this->Html->css('main.css'); ?>
+    <?= $this->Html->css('site.css'); ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    
+    <div class="container form-header"></div>
+    
+    <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -46,7 +49,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Ympäristökeskus</a>
+                <?= $this->Html->link("Ympäristökeskus", '/', array('class' => 'navbar-brand')) ?>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -56,7 +59,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <li>
                     <?php
                         if ($username) {
-                            echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); 
+                            echo $this->Html->link($this->Html->tag('i', '', 
+                                array('class' => 'fa fa-sign-out')).'KIRJAUDU ULOS', 
+                                array('controller' => 'users', 'action' => 'logout'), 
+                                array('escape' => false)); 
                         }
                     ?>
                     </li>

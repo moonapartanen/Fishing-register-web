@@ -14,11 +14,14 @@ class UsersController extends AppController
 {
     public function login()
     {
+        if ($this->Auth->user()) {
+            return $this->redirect(['controller' => 'surveys']);
+        }
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
-                if ($this->Auth->user("active") == 1) {
+                if ($this->Auth->user("status") == 1) {
                     return $this->redirect(['controller' => 'surveys']);
                 }
                 else {

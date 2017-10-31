@@ -17,43 +17,60 @@ class SurveysController extends AppController
 {
     public function index()
     {
-        $kalastusalueet = TableRegistry::get("kalastusalueet");
-        $surveys = $kalastusalueet->find()
-            ->select(["kalastusalueet.id", "kalastusalueet.nimi", "vesisto_id", "u.nimi", "d.kysymysotsikko"])
-            ->where(["kalastusalueet.id" =>  $this->Auth->user("kalastusalue_id")])
+        $tutkimusalueet = TableRegistry::get("tutkimusalueet");
+        $surveys = $tutkimusalueet->find()
+            ->select(["tutkimusalueet.id", "tutkimusalueet.nimi", "vesisto_id", "b.nimi", "c.kysymysotsikko", "c.kysymystyyppi_id", "c.kysymysnro"])
+            ->where(["tutkimusalueet.id" =>  $this->Auth->user("tutkimusalue_id")])
             ->hydrate(false)
             ->join([
-                'c' => [
-                    'table' => 'kalastusalue_kyselyt',
+                'a' => [
+                    'table' => 'tutkimusalue_kyselyt',
                     'type' => 'INNER',
-                    'conditions' => 'c.kalastusalue_id = kalastusalueet.id',
+                    'conditions' => 'a.tutkimusalue_id = tutkimusalueet.id',
                 ],
-                'u' => [
+                'b' => [
                     'table' => 'kyselyt',
                     'type' => 'INNER',
-                    'conditions' => 'u.id = c.kalastusalue_id',
+                    'conditions' => 'b.id = a.kysely_id',
                 ],
-                'd '=> [
+                'c'=> [
                     'table' => 'kysymykset',
                     'type' => 'INNER',
-                    'conditions' => 'u.id = d.kysely_id',
-                ]                
+                    'conditions' => 'b.id = c.kysely_id',
+                ]
+                
             ]);
         
-        $this->set(compact('surveys'));
-
-        $forms = "";
-        $this->set('form', $forms);
+        /*
+        $surveys = $kalastusalueet->find()
+                ->contain([
+                    'Kalastusalue_kyselyt.Kyselyt' => function ($q) {
+                        return $q->where(['Kalastusalue_kyselyt.kalastusalue_id' => "kalastusalueet.id"]);
+                    }
+                ]);
+        */
         
-        if ($this->request->is("post")) {
-            // SIIRRETÄÄN NÄMÄ TABLEEN KUNHAN TULEE ENEMMÄN DATAA
-            $usersTable = TableRegistry::get('users');
-            $currentUser = $usersTable->findById($this->Auth->user("id"))->first();
-            
-            $currentUser->active = "0";
-            $usersTable->save($currentUser);
-            $this->redirect(['action' => 'thanks']);
-        }
+        $resources = TableRegistry::get("resurssit");
+        $resources->find('all', [
+            'conditions' => ['Resurssit.resurssityyppi_id' => 1]
+        ]);
+        
+        $pyydykset = $resources->find('all', [
+            'conditions' => ['Resurssit.resurssityyppi_id' => 2]
+        ]);
+        
+        $haittatekijät = $resources->find('all', [
+            'conditions' => ['Resurssit.resurssityyppi_id' => 3]
+        ]);
+        
+        $surveys->order(['c.kysymysnro' => 'ASC']);
+        $form = "";
+        $this->set(compact('surveys'));
+        $this->set(compact('kalat'));
+        $this->set(compact('pyydykset'));
+        $this->set(compact('haittatekijät'));
+        $this->set(compact("form"));
+       
     }
     
     public function initialize()
