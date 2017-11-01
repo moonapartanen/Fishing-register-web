@@ -10,5 +10,6 @@ class SurveysTable extends Table
     {
         $this->hasMany("kalastusalue_kyselyt");
     }
+   
 }
 ?>

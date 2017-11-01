@@ -17,71 +17,35 @@ class SurveysController extends AppController
 {
     public function index()
     {
-        $tutkimusalueet = TableRegistry::get("tutkimusalueet");
-        $surveys = $tutkimusalueet->find()
-            ->select(["tutkimusalueet.id", "tutkimusalueet.nimi", "vesisto_id", "b.nimi", "c.kysymysotsikko", "c.kysymystyyppi_id", "c.kysymysnro"])
-            ->where(["tutkimusalueet.id" =>  $this->Auth->user("tutkimusalue_id")])
-            ->hydrate(false)
-            ->join([
-                'a' => [
-                    'table' => 'tutkimusalue_kyselyt',
-                    'type' => 'INNER',
-                    'conditions' => 'a.tutkimusalue_id = tutkimusalueet.id',
-                ],
-                'b' => [
-                    'table' => 'kyselyt',
-                    'type' => 'INNER',
-                    'conditions' => 'b.id = a.kysely_id',
-                ],
-                'c'=> [
-                    'table' => 'kysymykset',
-                    'type' => 'INNER',
-                    'conditions' => 'b.id = c.kysely_id',
-                ]
+        $this->loadModel('Tutkimusalueet');
+        
+        $tutkimusalue = $this->Auth->user("tutkimusalue_id");
+        $kyselyt = $this->Tutkimusalueet->find('surveys', [
+            'tutkimusalue' => $tutkimusalue
+        ]);
                 
-            ]);
+        $this->loadModel('Resurssit');
         
-        /*
-        $surveys = $kalastusalueet->find()
-                ->contain([
-                    'Kalastusalue_kyselyt.Kyselyt' => function ($q) {
-                        return $q->where(['Kalastusalue_kyselyt.kalastusalue_id' => "kalastusalueet.id"]);
-                    }
-                ]);
-        */
-        
-        $resources = TableRegistry::get("resurssit");
-        $resources->find('all', [
-            'conditions' => ['Resurssit.resurssityyppi_id' => 1]
+        $this->set([
+            'kyselyt' => $kyselyt,
+            'resurssit_pyydykset' =>  $this->Resurssit->find('list', ['conditions' => ['Resurssit.resurssityyppi_id' => 2]]),
+            'resurssit_haittatekijat' =>  $this->Resurssit->find('list', ['conditions' => ['Resurssit.resurssityyppi_id' => 3]]),
+            'resurssit_kalat' => $this->Resurssit->find('list', ['conditions' => ['Resurssit.resurssityyppi_id' => 1]]),
+            'kalastusalueet' => $this->Resurssit->find('list', ['conditions' => ['Resurssit.resurssityyppi_id' => 1]])
         ]);
         
-        $pyydykset = $resources->find('all', [
-            'conditions' => ['Resurssit.resurssityyppi_id' => 2]
-        ]);
+        $this->loadModel('Kalastusalueet');
         
-        $haittatekijät = $resources->find('all', [
-            'conditions' => ['Resurssit.resurssityyppi_id' => 3]
+        $this->set([
+            'kalastusalueet' => $this->Kalastusalueet->find('list')
         ]);
-        
-        $surveys->order(['c.kysymysnro' => 'ASC']);
-        $form = "";
-        $this->set(compact('surveys'));
-        $this->set(compact('kalat'));
-        $this->set(compact('pyydykset'));
-        $this->set(compact('haittatekijät'));
-        $this->set(compact("form"));
-       
     }
     
     public function initialize()
     {
         parent::initialize();
         $this->loadComponent('Flash'); // Include the FlashComponent
-    } 
-    
-    public function thanks() 
-    {
-        $this->Auth->logout();
     }
+    
 }
 ?>

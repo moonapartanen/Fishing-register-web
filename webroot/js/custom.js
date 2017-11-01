@@ -4,6 +4,10 @@ $(document).ready(function() {
     });
     
     $("#select-fish").change(function() {
+        $("#select-prob").removeClass("hidden");
+    });
+    
+    $("#select-prob").change(function() {
         $("#fish-amount").removeClass("hidden");
         $("#add").removeClass("hidden");
     });

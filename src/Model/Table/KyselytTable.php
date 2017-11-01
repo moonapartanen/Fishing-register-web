@@ -9,8 +9,8 @@ class KyselytTable extends Table
 {    
     public function initialize(array $config)
     {
-        $this->hasMany("kysymykset");
-        $this->belongsTo("tutkimusalueet");
+        $this->hasOne("kysymykset");
+        $this->belongsTo('Tutkimusalue_kyselyt');
     }
 }
 

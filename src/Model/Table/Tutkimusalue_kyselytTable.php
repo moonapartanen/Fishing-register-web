@@ -9,7 +9,8 @@ class Tutkimusalue_kyselytTable extends Table
 {    
     public function initialize(array $config)
     {
-        $this->hasOne("Kyselyt");
+        $this->hasMany("Kyselyt");
+        $this->hasMany('Tutkimusalueet');
     }
 }
 
