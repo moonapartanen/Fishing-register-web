@@ -81,6 +81,10 @@ h3 {
 label, .control-label, .help-block, .checkbox, .radio {
     font-size: 14px;
 }
+
+.label-bold {
+    font-weight: 700;
+}
 .icon-wrapper {
     padding: 35px;
 }
