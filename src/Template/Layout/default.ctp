@@ -26,7 +26,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'); ?>
-    <?= $this->Html->script(['https://code.jquery.com/jquery-1.12.4.min.js','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js']); ?>
+    <?= $this->Html->script(['https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js']); ?>
     <?= $this->Html->script('custom.js'); ?>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css'); ?>
     <?= $this->Html->css('https://fonts.googleapis.com/css?family=Titillium+Web'); ?>
