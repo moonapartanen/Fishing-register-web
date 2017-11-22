@@ -16,7 +16,7 @@ class TutkimusalueetTable extends Table
     public function findSurveys(Query $query, array $options) 
     {
         $surveys = $this->find()
-            ->select(["tutkimusalueet.id", "vesisto_id", "b.nimi", "c.kysymysotsikko", "c.kysymystyyppi_id", "c.kysymysnro"])
+            ->select(["tutkimusalueet.id", "vesisto_id", "b.id", "b.nimi", "c.kysymysotsikko", "c.kysymystyyppi_id", "c.kysymysnro"])
             ->where(["tutkimusalueet.id" =>  $options["tutkimusalue"]])
             ->hydrate(false)
             ->join([

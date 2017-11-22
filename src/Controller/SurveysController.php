@@ -27,6 +27,7 @@ class SurveysController extends AppController
         $this->loadModel('Resurssit');
         
         $this->set([
+            'tutkimusalue' => $tutkimusalue,
             'kyselyt' => $kyselyt,
             'resurssit_pyydykset' =>  $this->Resurssit->find('list', ['conditions' => ['Resurssit.resurssityyppi_id' => 2]]),
             'resurssit_haittatekijat' =>  $this->Resurssit->find('list', ['conditions' => ['Resurssit.resurssityyppi_id' => 3]]),

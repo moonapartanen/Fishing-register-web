@@ -259,6 +259,30 @@ return [
 
             'url' => env('DATABASE_URL', null),
         ],
+        'db_answers' => [
+            'className' => 'Cake\Database\Connection',
+            'driver' => 'Cake\Database\Driver\Mysql',
+            'persistent' => false,
+            'host' => 'localhost',
+
+            //'port' => 'non_standard_port_number',
+            'username' => 'root',
+            'password' => '',
+            'database' => 'fishingregister_answers',
+            'encoding' => 'utf8',
+            'timezone' => 'UTC',
+            'flags' => [],
+            'cacheMetadata' => true,
+            'log' => false,
+			
+            'quoteIdentifiers' => false,
+			
+            //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+
+            'url' => env('DATABASE_URL', null),
+        ],		
+		
+		
 
         /**
          * The test connection is used during the test suite.

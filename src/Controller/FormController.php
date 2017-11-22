@@ -6,6 +6,7 @@ use Cake\ORM\Table;
 
 use Cake\ORM\TableRegistry;
 use Cake\Datasource\ConnectionManager;
+use Cake\Log\Log;
 /**
  * Users Controller
  *
@@ -19,12 +20,17 @@ class FormController extends AppController
     {
         if ($this->request->is("post")) {
             // SIIRRETÄÄN NÄMÄ TABLEEN KUNHAN TULEE ENEMMÄN DATAA
-            $usersTable = TableRegistry::get('kayttajat');
-            $currentUser = $usersTable->findById($this->Auth->user("id"))->first();
+            $this->loadModel('Kayttajat');
+            $currentUser = $this->Kayttajat->findById($this->Auth->user("id"))->first();
             
-            $currentUser->status = "0";
-            $usersTable->save($currentUser);
-            $this->redirect(['action' => 'thanks']);
+            //$currentUser->status = "0";
+            //$this->Kayttajat->save($currentUser);
+            $this->Form->useDbConfig('db_answers');
+            $args = $this->request->getData("10");
+            $this->log($args, 'debug');
+            $this->loadModel("Vastaukset");
+            $this->Vastaukset->save($args);
+            //$this->redirect(['action' => 'thanks']);
         }
     }
     
