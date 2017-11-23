@@ -25,11 +25,22 @@ class FormController extends AppController
             
             //$currentUser->status = "0";
             //$this->Kayttajat->save($currentUser);
-            $this->Form->useDbConfig('db_answers');
-            $args = $this->request->getData("10");
-            $this->log($args, 'debug');
-            $this->loadModel("Vastaukset");
-            $this->Vastaukset->save($args);
+            $connection = ConnectionManager::get('db_answers');
+            
+            
+            
+            $connection->insert('vastaukset', [
+                'kysely_id' => $this->request->data['kysely'],
+                'kysymystyyppi_id' => $this->request->data['kysymystyyppi'],
+                'kysymysnro' => 1,
+                'kysymysotsikko' => $this->request->data['kysymys-1'],
+                'vastaus' => 'testi',
+                'vastauspvm' => date('Y-m-d H:i:s')
+            ]);            
+            
+            //$this->log($args, 'debug');
+            //$this->loadModel("Vastaukset");
+            //$this->Vastaukset->save($args);
             //$this->redirect(['action' => 'thanks']);
         }
     }

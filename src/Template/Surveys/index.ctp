@@ -25,6 +25,7 @@ use Cake\Log\Log;
                     
                     <?php foreach ($kyselyt as $kysely) :
                             echo  $this->Form->hidden('kysely', ['value'=>$kysely["b"]["id"]]);
+                            echo  $this->Form->hidden('kyselynimi', ['value'=>$kysely["b"]["nimi"]]);
                             break;
                         endforeach;
                     ?>
@@ -38,9 +39,10 @@ use Cake\Log\Log;
                         $otsikko = $kysely["c"]["kysymysotsikko"];
                         echo "<div class='form-group'>";
                         if ($kysymystyyppi == 1) {
-                            echo $this->Form->hidden('kysymys', ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
-                            echo $this->Form->control($kysymysnro, array (
+                            echo $this->Form->control('vapaateksti-' . $kysymysnro, array (
                                 'type' => 'textarea',
                                 'label' => false,
                                 'class' => 'label-bold',
@@ -49,27 +51,31 @@ use Cake\Log\Log;
                             echo "</div>";
                         }
                         elseif ($kysymystyyppi == 2) {
-                            echo $this->Form->hidden('kysymys', ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
-                            echo $this->Form->radio('kylla-ei-' . $kysymysnro, ['Kyllä','Ei'], []);
+                            $options = ['Kyllä' => 'Kyllä', 'Ei' => 'Ei'];
+                            echo $this->Form->radio('kylla-ei-' . $kysymysnro, $options, []);
                             echo "</div>";
                         }
                         elseif ($kysymystyyppi == 3) {
-                            echo $this->Form->hidden('kysymys', ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             echo $this->Form->radio('kalastusalueet', $kalastusalueet, []);
                             echo "</div>";
                             
                         }
                         elseif ($kysymystyyppi == 4) {
-                            echo $this->Form->hidden('kysymys', ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             echo $this->Form->control($kysymysnro, array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Tammikuu",
-                                'name' => 'tammi',
+                                'name' => 'tammikuu',
                                 
                             ));
                             
@@ -78,7 +84,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Helmikuu",
-                                'name' => 'helmi',
+                                'name' => 'helmikuu',
                                 
                             ));
 
@@ -87,7 +93,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Maaliskuu",
-                                'name' => 'maalis',
+                                'name' => 'maaliskuu',
                                 
                             ));
 
@@ -96,7 +102,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Huhtikuu",
-                                'name' => 'huhti',
+                                'name' => 'huhtikuu',
                                 
                             ));
 
@@ -105,7 +111,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Toukokuu",
-                                'name' => 'touko',
+                                'name' => 'toukokuu',
                                 
                             ));
 
@@ -114,7 +120,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Kesäkuu",
-                                'name' => 'kesa',
+                                'name' => 'kesäkuu',
                                 
                             ));
 
@@ -123,7 +129,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Heinäkuu",
-                                'name' => 'heina',
+                                'name' => 'heinäkuu',
                                 
                             ));
 
@@ -132,7 +138,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Elokuu",
-                                'name' => 'elo',
+                                'name' => 'elokuu',
                                 
                             ));
 
@@ -141,7 +147,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Syyskuu",
-                                'name' => 'syys',
+                                'name' => 'syyskuu',
                                 
                             ));
 
@@ -150,7 +156,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' =>  "Lokakuu",
-                                'name' => 'loka',
+                                'name' => 'lokakuu',
                                 
                             ));
 
@@ -159,7 +165,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Marraskuu",
-                                'name' => 'marras',
+                                'name' => 'marraskuu',
                                 
                             ));
 
@@ -168,7 +174,7 @@ use Cake\Log\Log;
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Joulukuu",
-                                'name' => 'joulu',
+                                'name' => 'joulukuu',
                                 
                             ));
                          
@@ -176,7 +182,8 @@ use Cake\Log\Log;
                             
                         }
                         elseif ($kysymystyyppi == 5) {
-                            echo $this->Form->hidden('kysymys', ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             
                             echo $this->Form->input('', array (
@@ -234,7 +241,8 @@ use Cake\Log\Log;
                             
                         }
                         elseif ($kysymystyyppi == 6) {
-                            echo $this->Form->hidden('kysymys', ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             
                             echo $this->Form->input('', array (
@@ -286,37 +294,46 @@ use Cake\Log\Log;
                             
                         }
                         elseif ($kysymystyyppi == 7) {
-                            echo $this->Form->hidden('kysymys', ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                            echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                            echo "</div>";
                             
                         }
                         elseif ($kysymystyyppi == 8) {
-                            echo $this->Form->hidden('kysymys', ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
+                            $options = ['Haittaa merkittävästi' => 'Haittaa merkittävästi', 'Haittaa kohtalaisesti' => 'Haittaa kohtalaisesti', 'Ei haittaa' => 'Ei haittaa'];
                             foreach ($resurssit_haittatekijat as $tekija) :
                                 echo $this->Form->label($kysymysnro, $tekija, ['style' => 'font-weight: 500;']);
-                                echo $this->Form->radio($tekija . "-" . $kysymysnro, ['Haittaa merkittävästi','Haittaa kohtalaisesti', 'Ei haittaa'], []);
+                                echo $this->Form->radio($tekija . "-" . $kysymysnro, $options, []);
                             endforeach;
+                            echo "</div>";
                             
                         }
                         elseif ($kysymystyyppi == 9) {
-                            echo $this->Form->hidden('kysymys', ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             echo "<br>";
                             foreach ($resurssit_kalat as $kala) :
                                 echo $this->Form->label($kysymysnro, $kala, ['style' => 'font-weight: 500;']);
-                                echo $this->Form->radio($kala . "-" . $kysymysnro, ['Yleistynyt','Vähentynyt', 'Ei muutosta'], []);
+                                $options = ['Yleistynyt' => 'Yleistynyt', 'Vähentynyt' => 'Vähentynyt', 'Ei muutosta' => 'Ei muutosta'];
+                                echo $this->Form->radio($kala . "-" . $kysymysnro, $options, []);
                             endforeach;
+                            echo "</div>";
                             
                         }
                         elseif ($kysymystyyppi == 10) {
-                            echo $this->Form->hidden('kysymys', ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
-                            echo $this->Form->radio('arvio', ['Merkittävä','Kohtalainen', 'Ei merkitystä', 'Ei tietoa'], []);
-                            echo $this->Form->control('', array (
+                            $options = ['Merkittävä' => 'Merkittävä', 'Kohtalainen' => 'Kohtalainen', 'Ei merkitystä' => 'Ei merkitystä', 'Ei tietoa' => 'Ei tietoa'];
+                            echo $this->Form->radio('arvio', $options, []);
+                            echo $this->Form->control('lisatietoja-' . $kysymysnro, array (
                                 'type' => 'textarea',   
-                                'label' => 'Lisätietoja'
+                                'label' => 'Lisätietoja',
                             ));                             
                             echo "</div>";
                             
@@ -325,7 +342,7 @@ use Cake\Log\Log;
 
                     endforeach; ?>
 
-                    <?= $this->Form->button('Lähetä', array('class' => 'btn btn-default')) ?>
+                    <?= $this->Form->button('Lähetä', array('class' => 'btn btn-default', 'id' => 'sendform')) ?>
                     <?= $this->Form->end() ?> 
                 </div>
             </div>
