@@ -27978,3 +27978,1974 @@ Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
 
 
 
+2017-11-23 16:50:45 Error: Fatal Error (4): syntax error, unexpected '$kysymysnro' (T_VARIABLE) in [C:\wamp64\www\dev\Fishing-register-web\src\Template\Surveys\index.ctp, line 333]
+Request URL: /surveys
+Referer URL: http://localhost/dev/Fishing-register-web/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-11-23 16:50:45 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$kysymysnro' (T_VARIABLE) in C:\wamp64\www\dev\Fishing-register-web\src\Template\Surveys\index.ctp on line 333
+Request URL: /surveys
+Referer URL: http://localhost/dev/Fishing-register-web/
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\d...', 333)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-11-23 16:55:34 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'kysymysotsikko' cannot be null
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\Database\Query))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(405): Cake\Database\Query->execute()
+#6 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(38): Cake\Database\Connection->insert('vastaukset', Array)
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-11-23 16:55:35 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:55:35 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:55:35 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:55:35 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:55:52 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'kysymysotsikko' cannot be null
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\Database\Query))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(405): Cake\Database\Query->execute()
+#6 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(38): Cake\Database\Connection->insert('vastaukset', Array)
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-11-23 16:55:52 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:55:52 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:55:53 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:55:53 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:56:09 Error: [InvalidArgumentException] Cannot convert value to string
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\StringType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(69): Cake\Database\Statement\StatementDecorator->cast(Array, 'string')
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(107): Cake\Database\Statement\PDOStatement->bindValue('c3', Array, NULL)
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(98): Cake\Database\Statement\StatementDecorator->bindValue('c3', Array, NULL)
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\ValueBinder.php(147): Cake\Database\Log\LoggingStatement->bindValue('c3', Array, NULL)
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(313): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#6 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\Database\Query))
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(405): Cake\Database\Query->execute()
+#8 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(38): Cake\Database\Connection->insert('vastaukset', Array)
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#25 {main}
+
+
+2017-11-23 16:56:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'kysymysotsikko' cannot be null
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\Database\Query))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(405): Cake\Database\Query->execute()
+#6 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(38): Cake\Database\Connection->insert('vastaukset', Array)
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-11-23 16:56:25 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:56:25 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:56:25 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 16:56:25 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:18:17 Error: [InvalidArgumentException] Cannot get an empty property
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Datasource\EntityTrait.php(135): Cake\ORM\Entity->get('')
+#1 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(44): Cake\ORM\Entity->__get('')
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2017-11-23 17:18:17 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:18:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:18:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:18:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:19:17 Error: [InvalidArgumentException] Cannot get an empty property
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Datasource\EntityTrait.php(135): Cake\ORM\Entity->get('')
+#1 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(44): Cake\ORM\Entity->__get('')
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2017-11-23 17:19:17 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:19:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:19:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:19:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:31:25 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:31:25 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:31:25 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:31:25 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:32:07 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:32:08 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:32:08 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:32:08 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:32:21 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:32:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:32:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:32:22 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:35:19 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Kalastiko joku ruokakuntanne jäsenistä Nuorajärvessä, Koitajoessa tai Kelsimänjoessa vuonna 2016?' for column 'kysymysnro' at row 1
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\Database\Query))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(405): Cake\Database\Query->execute()
+#6 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(54): Cake\Database\Connection->insert('vastaukset', Array)
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-11-23 17:43:22 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'kysymysnro' cannot be null
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\Database\Query))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(405): Cake\Database\Query->execute()
+#6 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(56): Cake\Database\Connection->insert('vastaukset', Array)
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-11-23 17:43:23 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:43:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:43:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 17:43:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:04:04 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php, line 46]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-11-23 18:04:04 Warning: Headers already sent in C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php:46
+2017-11-23 18:04:04 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php on line 46
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\d...', 46)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-11-23 18:04:21 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:04:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:04:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:04:22 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:27:09 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:27:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:27:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:27:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:29:25 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:29:25 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:29:26 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:29:26 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:29:55 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:29:55 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:29:55 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:29:55 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:12 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:12 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:12 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:13 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:19 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:45 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:31:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:34:42 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:34:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:34:43 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:34:43 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:40:49 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'kysymystyyppi_id' at row 1
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\Database\Query))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(405): Cake\Database\Query->execute()
+#6 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(56): Cake\Database\Connection->insert('vastaukset', Array)
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-11-23 18:40:50 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:40:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:40:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:40:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:42:45 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'kysymystyyppi_id' at row 1
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\Database\Query))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(405): Cake\Database\Query->execute()
+#6 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(56): Cake\Database\Connection->insert('vastaukset', Array)
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-11-23 18:42:45 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:42:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:42:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:42:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:43:16 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:43:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:43:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:43:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:43:38 Error: 
+2017-11-23 18:43:39 Error: 
+2017-11-23 18:43:39 Error: 
+2017-11-23 18:43:39 Error: 
+2017-11-23 18:43:39 Error: 
+2017-11-23 18:43:40 Error: 
+2017-11-23 18:43:40 Error: 
+2017-11-23 18:43:40 Error: 
+2017-11-23 18:43:40 Error: 
+2017-11-23 18:43:41 Error: 
+2017-11-23 18:43:41 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:43:41 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:43:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:43:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:44:11 Error: 
+2017-11-23 18:44:11 Error: 
+2017-11-23 18:44:11 Error: 
+2017-11-23 18:44:12 Error: 
+2017-11-23 18:44:12 Error: 
+2017-11-23 18:44:12 Error: 
+2017-11-23 18:44:12 Error: 
+2017-11-23 18:44:13 Error: 
+2017-11-23 18:44:13 Error: 
+2017-11-23 18:44:13 Error: 
+2017-11-23 18:44:13 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:44:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:44:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:44:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:45:22 Error: 1
+2017-11-23 18:45:22 Error: 1
+2017-11-23 18:45:22 Error: 1
+2017-11-23 18:45:23 Error: 1
+2017-11-23 18:45:23 Error: 1
+2017-11-23 18:45:23 Error: 1
+2017-11-23 18:45:24 Error: 1
+2017-11-23 18:45:24 Error: 1
+2017-11-23 18:45:24 Error: 1
+2017-11-23 18:45:24 Error: 1
+2017-11-23 18:45:57 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:45:57 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:45:57 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:45:57 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:47:51 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:47:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:47:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:47:52 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:59:59 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:59:59 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:59:59 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 18:59:59 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:02:00 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:02:00 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:02:00 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:02:01 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:02:39 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:02:39 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:02:40 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:02:40 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:33:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'kysymystyyppi_id' cannot be null
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\Database\Query))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(405): Cake\Database\Query->execute()
+#6 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(53): Cake\Database\Connection->insert('vastaukset', Array)
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-11-23 19:33:17 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:33:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:33:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:33:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:33:41 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'testi' for column 'vastaus' at row 1
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Stack Trace:
+#0 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\Database\Query))
+#5 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Database\Connection.php(405): Cake\Database\Query->execute()
+#6 C:\wamp64\www\dev\Fishing-register-web\src\Controller\FormController.php(61): Cake\Database\Connection->insert('vastaus_kentat', Array)
+#7 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Controller\Controller.php(441): App\Controller\FormController->index()
+#8 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#9 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FormController))
+#10 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\wamp64\www\dev\Fishing-register-web\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-11-23 19:33:41 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:33:41 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:33:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 19:33:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 20:04:49 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 20:04:49 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 20:04:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 20:04:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 20:06:47 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php line=850 in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 20:06:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 20:06:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2017-11-23 20:06:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Error\Debugger.php:850) in [C:\wamp64\www\dev\Fishing-register-web\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /form
+Referer URL: http://localhost/dev/Fishing-register-web/surveys
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 106
+[main] - ROOT\webroot\index.php, line 40
+
+
+

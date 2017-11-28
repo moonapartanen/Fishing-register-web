@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\ORM\Table;
+use App\Model\Entity\Vastaus;
 
 use Cake\ORM\TableRegistry;
 use Cake\Datasource\ConnectionManager;
@@ -27,18 +28,44 @@ class FormController extends AppController
             //$this->Kayttajat->save($currentUser);
             $connection = ConnectionManager::get('db_answers');
             
+            foreach ($this->request->data['kysymys'] as $kysymysnro => $kysymysotsikko) {
+                $kysymys = explode('@', $kysymysotsikko);
+                
+                if ($kysymys[1] == 1 || $kysymys[1] == 2 || $kysymys[1] == 3) {
+                    $connection->insert('vastaukset', [
+                        'kysely_id' => $this->request->data['kysely'],
+                        'kysymystyyppi_id' => $kysymys[1],
+                        'kysymysnro' => $kysymysnro,
+                        'kysymysotsikko' => $kysymys[0],
+                        'vastaus' => 'testi',
+                        'vastauspvm' => date('Y-m-d H:i:s')
+                    ]);               
+                } else if($kysymys[1] == 8) {
+                    $this->log($this->request->data['vastaus'], 'debug');
+                }
+                /*
+                else {
+                    $connection->insert('vastaus_kentat', [
+                        'vastaus_id' => $this->request->data['kysely'],
+                        'rivi_resurssi_id' => $kysymystyyppi[1],
+                        'sarake_resurssi_id' => $kysymysnro,
+                        'vastaus' => 'testi'
+                    ]);
+                }
+                
+                */
+                //$this->log($kysymysnro . ' - '. $kysymysotsikko, 'debug');
+                /*
+                foreach ($this->request->data['vastaus'] as $value) {
+                    $this->log($value . ' - ', 'debug');
+                }
+                
+                 */
+            }
             
             
-            $connection->insert('vastaukset', [
-                'kysely_id' => $this->request->data['kysely'],
-                'kysymystyyppi_id' => $this->request->data['kysymystyyppi'],
-                'kysymysnro' => 1,
-                'kysymysotsikko' => $this->request->data['kysymys-1'],
-                'vastaus' => 'testi',
-                'vastauspvm' => date('Y-m-d H:i:s')
-            ]);            
             
-            //$this->log($args, 'debug');
+            //$this->log($this->request->data['kysymys'], 'debug');
             //$this->loadModel("Vastaukset");
             //$this->Vastaukset->save($args);
             //$this->redirect(['action' => 'thanks']);

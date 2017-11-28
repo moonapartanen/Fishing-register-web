@@ -5,7 +5,6 @@
         <group>
             <file>file:/C:/wamp64/www/dev/Fishing-register-web/src/Controller/FormController.php</file>
             <file>file:/C:/wamp64/www/dev/Fishing-register-web/src/Model/Table/TutkimusalueetTable.php</file>
-            <file>file:/C:/wamp64/www/dev/Fishing-register-web/src/Model/Table/Tutkimusalue_kyselytTable.php</file>
             <file>file:/C:/wamp64/www/dev/Fishing-register-web/webroot/js/custom.js</file>
             <file>file:/C:/wamp64/www/dev/Fishing-register-web/src/Model/Table/KalastusalueetTable.php</file>
             <file>file:/C:/wamp64/www/dev/Fishing-register-web/src/Template/Surveys/index.ctp</file>
@@ -14,6 +13,7 @@
             <file>file:/C:/wamp64/www/dev/Fishing-register-web/src/Model/Table/KysymyksetTable.php</file>
             <file>file:/C:/wamp64/www/dev/Fishing-register-web/src/Model/Entity/Vastaus.php</file>
             <file>file:/C:/wamp64/www/dev/Fishing-register-web/src/Model/Table/VastauksetTable.php</file>
+            <file>file:/C:/wamp64/www/dev/Fishing-register-web/src/Template/Form/thanks.ctp</file>
         </group>
     </open-files>
 </project-private>

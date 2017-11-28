@@ -39,10 +39,10 @@ use Cake\Log\Log;
                         $otsikko = $kysely["c"]["kysymysotsikko"];
                         echo "<div class='form-group'>";
                         if ($kysymystyyppi == 1) {
-                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys[' . $kysymysnro . ']', ['value'=> $otsikko . '@' . $kysymystyyppi]);
                             echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
-                            echo $this->Form->control('vapaateksti-' . $kysymysnro, array (
+                            echo $this->Form->control('vastaus[' . $kysymysnro. ']', array (
                                 'type' => 'textarea',
                                 'label' => false,
                                 'class' => 'label-bold',
@@ -51,23 +51,23 @@ use Cake\Log\Log;
                             echo "</div>";
                         }
                         elseif ($kysymystyyppi == 2) {
-                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys[' . $kysymysnro . ']', ['value'=> $otsikko . '@' . $kysymystyyppi]);
                             echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             $options = ['Kyllä' => 'Kyllä', 'Ei' => 'Ei'];
-                            echo $this->Form->radio('kylla-ei-' . $kysymysnro, $options, []);
+                            echo $this->Form->radio('vastaus[' . $kysymysnro . ']', $options, []);
                             echo "</div>";
                         }
                         elseif ($kysymystyyppi == 3) {
-                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys[' . $kysymysnro . ']', ['value'=> $otsikko . '@' . $kysymystyyppi]);
                             echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
-                            echo $this->Form->radio('kalastusalueet', $kalastusalueet, []);
+                            echo $this->Form->radio('vastaus[' . $kysymysnro . ']', $kalastusalueet, []);
                             echo "</div>";
                             
                         }
                         elseif ($kysymystyyppi == 4) {
-                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys[' . $kysymysnro . ']', ['value'=> $otsikko . '@' . $kysymystyyppi]);
                             echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             echo $this->Form->control($kysymysnro, array (
@@ -182,7 +182,7 @@ use Cake\Log\Log;
                             
                         }
                         elseif ($kysymystyyppi == 5) {
-                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys[' . $kysymysnro . ']', ['value'=> $otsikko . '@' . $kysymystyyppi]);
                             echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             
@@ -241,7 +241,7 @@ use Cake\Log\Log;
                             
                         }
                         elseif ($kysymystyyppi == 6) {
-                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys[' . $kysymysnro . ']', ['value'=> $otsikko . '@' . $kysymystyyppi]);
                             echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             
@@ -294,44 +294,46 @@ use Cake\Log\Log;
                             
                         }
                         elseif ($kysymystyyppi == 7) {
-                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys[' . $kysymysnro . ']', ['value'=> $otsikko . '@' . $kysymystyyppi]);
                             echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                            echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                            echo "</div>";
                             
                         }
                         elseif ($kysymystyyppi == 8) {
-                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys[' . $kysymysnro . ']', ['value'=> $otsikko . '@' . $kysymystyyppi]);
                             echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             $options = ['Haittaa merkittävästi' => 'Haittaa merkittävästi', 'Haittaa kohtalaisesti' => 'Haittaa kohtalaisesti', 'Ei haittaa' => 'Ei haittaa'];
-                            foreach ($resurssit_haittatekijat as $tekija) :
-                                echo $this->Form->label($kysymysnro, $tekija, ['style' => 'font-weight: 500;']);
-                                echo $this->Form->radio($tekija . "-" . $kysymysnro, $options, []);
+                            $array_index = 0;
+                            foreach ($resurssit_haittatekijat as $tekija => $index) :
+                                echo $this->Form->label($kysymysnro, $index, ['style' => 'font-weight: 500;']);
+                                echo $this->Form->radio('vastaus[' . $kysymysnro . ']' . '[' . $array_index . ']' . '[' . $array_index . ']', $options, []);
+                                $array_index++;
                             endforeach;
                             echo "</div>";
                             
                         }
                         elseif ($kysymystyyppi == 9) {
-                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys[' . $kysymysnro . ']', ['value'=> $otsikko . '@' . $kysymystyyppi]);
                             echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             echo "<br>";
                             foreach ($resurssit_kalat as $kala) :
                                 echo $this->Form->label($kysymysnro, $kala, ['style' => 'font-weight: 500;']);
                                 $options = ['Yleistynyt' => 'Yleistynyt', 'Vähentynyt' => 'Vähentynyt', 'Ei muutosta' => 'Ei muutosta'];
-                                echo $this->Form->radio($kala . "-" . $kysymysnro, $options, []);
+                                echo $this->Form->radio('vastaus[' . $kysymysnro . "-" . $kala . ']', $options, []);
                             endforeach;
                             echo "</div>";
                             
                         }
                         elseif ($kysymystyyppi == 10) {
-                            echo $this->Form->hidden('kysymys-' . $kysymysnro, ['value'=> $otsikko]);
+                            echo $this->Form->hidden('kysymys[' . $kysymysnro . ']', ['value'=> $otsikko . '@' . $kysymystyyppi]);
                             echo $this->Form->hidden('kysymystyyppi', ['value'=> $kysymystyyppi]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             $options = ['Merkittävä' => 'Merkittävä', 'Kohtalainen' => 'Kohtalainen', 'Ei merkitystä' => 'Ei merkitystä', 'Ei tietoa' => 'Ei tietoa'];
-                            echo $this->Form->radio('arvio', $options, []);
-                            echo $this->Form->control('lisatietoja-' . $kysymysnro, array (
+                            echo $this->Form->radio('vastaus[' . $kysymysnro . ']', $options, []);
+                            echo $this->Form->control('vastaus[' . $kysymysnro . ']', array (
                                 'type' => 'textarea',   
                                 'label' => 'Lisätietoja',
                             ));                             
