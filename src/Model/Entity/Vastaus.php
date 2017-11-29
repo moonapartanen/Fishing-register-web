@@ -9,6 +9,7 @@ class Vastaus extends Entity
         '*' => true,
         'id' => true
     ];
+    
 }
 
 ?>

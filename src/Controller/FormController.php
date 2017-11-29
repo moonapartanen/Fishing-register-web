@@ -19,6 +19,7 @@ class FormController extends AppController
 {
     public function index()
     {
+        
         if ($this->request->is("post")) {
             // SIIRRETÄÄN NÄMÄ TABLEEN KUNHAN TULEE ENEMMÄN DATAA
             $this->loadModel('Kayttajat');
@@ -26,48 +27,67 @@ class FormController extends AppController
             
             //$currentUser->status = "0";
             //$this->Kayttajat->save($currentUser);
-            $connection = ConnectionManager::get('db_answers');
+            //
+            //$connection = ConnectionManager::get('db_answers');
+            $vastauksetTable = TableRegistry::get('Vastaukset');
             
+           
             foreach ($this->request->data['kysymys'] as $kysymysnro => $kysymysotsikko) {
                 $kysymys = explode('@', $kysymysotsikko);
+                //$this->log($kysymys[2], 'debug');
                 
                 if ($kysymys[1] == 1 || $kysymys[1] == 2 || $kysymys[1] == 3) {
-                    $connection->insert('vastaukset', [
+                
+                $vastaus_single = $vastauksetTable->newEntity();
+                $vastaus_single->kysymys_id = $kysymys[2];
+                $vastaus_single->vastauspvm = date('Y-m-d H:i:s');
+                $vastaus_single->vastaus = 'testi';
+                
+                $vastauksetTable->save($vastaus_single); 
+                    
+                } 
+                else if($kysymys[1] == 8) {
+                    /*
+                    foreach ($this->request->data['vastaus']['6']['0'] as $vastaus => $v) {
+                        
+                        $vastauksetTable = TableRegistry::get('Vastaus_kentat');
+                        $this->log($vastaus . ' - ', 'debug');
+                        
+                        $connection->insert('vastaukset', [
+                            'kysely_id' => $this->request->data['kysely'],
+                            'kysymystyyppi_id' => $kysymys[1],
+                            'kysymysnro' => $kysymysnro,
+                            'kysymysotsikko' => $kysymys[0],
+                            'vastaus' => '',
+                            'vastauspvm' => date('Y-m-d H:i:s')
+                        ]); 
+                                               
+                        $connection->insert('vastaus_kentat', [
+                            'vastaus_id' => $lastId,
+                            'rivi_resurssi_id' => $vastaus,
+                            'sarake_resurssi_id' => $vastaus,
+                            'vastaus' => $v,
+                        ]);                         
+                    */
+                    }
+                   /*
+                        $connection->insert('vastaukset', [
                         'kysely_id' => $this->request->data['kysely'],
                         'kysymystyyppi_id' => $kysymys[1],
                         'kysymysnro' => $kysymysnro,
                         'kysymysotsikko' => $kysymys[0],
                         'vastaus' => 'testi',
                         'vastauspvm' => date('Y-m-d H:i:s')
-                    ]);               
-                } else if($kysymys[1] == 8) {
-                    $this->log($this->request->data['vastaus'], 'debug');
+                        ]);   
+                    
+                    
                 }
-                /*
-                else {
-                    $connection->insert('vastaus_kentat', [
-                        'vastaus_id' => $this->request->data['kysely'],
-                        'rivi_resurssi_id' => $kysymystyyppi[1],
-                        'sarake_resurssi_id' => $kysymysnro,
-                        'vastaus' => 'testi'
-                    ]);
-                }
-                
-                */
-                //$this->log($kysymysnro . ' - '. $kysymysotsikko, 'debug');
-                /*
-                foreach ($this->request->data['vastaus'] as $value) {
-                    $this->log($value . ' - ', 'debug');
-                }
-                
-                 */
+               */
             }
             
             
             
             //$this->log($this->request->data['kysymys'], 'debug');
-            //$this->loadModel("Vastaukset");
-            //$this->Vastaukset->save($args);
             //$this->redirect(['action' => 'thanks']);
         }
     }
