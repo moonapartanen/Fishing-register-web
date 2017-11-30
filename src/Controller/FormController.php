@@ -32,21 +32,75 @@ class FormController extends AppController
             $vastauksetTable = TableRegistry::get('Vastaukset');
             
            
-            foreach ($this->request->data['kysymys'] as $kysymysnro => $kysymysotsikko) {
+            foreach ($this->request->data['kysymys'] as $kysymysotsikko) {
+                $this->log($kysymysotsikko, 'debug');
                 $kysymys = explode('@', $kysymysotsikko);
-                //$this->log($kysymys[2], 'debug');
                 
-                if ($kysymys[1] == 1 || $kysymys[1] == 2 || $kysymys[1] == 3) {
                 
-                $vastaus_single = $vastauksetTable->newEntity();
-                $vastaus_single->kysymys_id = $kysymys[2];
-                $vastaus_single->vastauspvm = date('Y-m-d H:i:s');
-                $vastaus_single->vastaus = 'testi';
                 
-                $vastauksetTable->save($vastaus_single); 
-                    
-                } 
-                else if($kysymys[1] == 8) {
+                    if ($kysymys[1] == 1 || $kysymys[1] == 2 || $kysymys[1] == 3) {
+                        /*
+                        $vastaus_single = $vastauksetTable->newEntity();
+
+                        foreach ($this->request->data['vastaus'] as $id => $vastaus) {
+                            
+                            if ($id == $kysymys[2]) {
+                                $vastaus_single->vastaus = $vastaus;
+                            }
+                            
+                        }
+
+                        $vastaus_single->kysymys_id = $kysymys[2];
+                        $vastaus_single->vastauspvm = date('Y-m-d H:i:s');
+                        
+                        $vastauksetTable->save($vastaus_single); 
+                        */
+                    } 
+                    else if($kysymys[1] == 8) {
+                        $vastauksetTable = TableRegistry::get('Vastaukset');
+
+                        $vastaus_single = $vastauksetTable->newEntity();
+                        $vastaus_single->kysymys_id = $kysymys[2];
+                        $vastaus_single->vastauspvm = date('Y-m-d H:i:s');
+
+                        $vastauksetTable->save($vastaus_single); 
+                        $lastinsertid = $vastaus_single->id;
+                        $this->log($lastinsertid, 'debug');
+                        foreach ($this->request->data['vastaus'] as $id => $vastaus) {
+                            //$this->log($vastaus, 'debug');
+
+                            if (is_array($vastaus)) {
+                                foreach ($vastaus as $v) {
+                                    if (is_array($v)) {
+                                        foreach ($v as $index => $value) {
+                                            //$this->log($index, 'debug');
+                                            
+                                            $vastaus_kentatTable = TableRegistry::get('Vastaus_kentat');
+                                            $vastaus_single = $vastaus_kentatTable->newEntity();
+
+                                            $vastaus_single->kysymys_kentat_id = '1043';
+                                            $vastaus_single->vastaus_id  = $lastinsertid;
+                                            $vastaus_single->vastaus  = $value;
+
+                                            $vastaus_kentatTable->save($vastaus_single);
+
+                                        }
+                                    }
+                                    
+                                }
+                                
+                            }
+
+                            if ($id == $kysymys[2]) {
+                                $vastaus_single->vastaus = $vastaus;
+                            }
+                            
+                        }
+
+
+                    }
+
+                
                     /*
                     foreach ($this->request->data['vastaus']['6']['0'] as $vastaus => $v) {
                         
@@ -68,8 +122,7 @@ class FormController extends AppController
                             'sarake_resurssi_id' => $vastaus,
                             'vastaus' => $v,
                         ]);                         
-                    */
-                    }
+                    */                    
                    /*
                         $connection->insert('vastaukset', [
                         'kysely_id' => $this->request->data['kysely'],
