@@ -56,7 +56,7 @@ class FormController extends AppController
                         $vastauksetTable->save($vastaus_single); 
                         */
                     } 
-                    else if($kysymys[1] == 8) {
+                    elseif($kysymys[1] == 8 || $kysymys[1] == 9) {
                         $vastauksetTable = TableRegistry::get('Vastaukset');
 
                         $vastaus_single = $vastauksetTable->newEntity();
@@ -96,7 +96,6 @@ class FormController extends AppController
                             }
                             
                         }
-
 
                     }
 

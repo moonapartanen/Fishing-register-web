@@ -166,17 +166,18 @@ use Cake\Log\Log;
                         }
                         elseif ($kysymystyyppi == 5) {
                             echo $this->Form->hidden('kysymys[]', ['value'=> $otsikko . '@' . $kysymystyyppi . '@' . $kysymysid]);
+                            echo $this->Form->hidden('', ['value'=> $kysymysid, 'id' => 'kysymysid']);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             
                             echo $this->Form->input('', array (
                                 'type' => 'select',
-                                'id' => 'select-resource',
+                                'id' => 'select-pyydys',
                                 'label' => 'Valitse pyydys',
                                 'empty' => 'Valitse',
                                 'options' => $resurssit_pyydykset,
                             ));
                             
-                            echo '<div id="select-fish" class="hidden">';
+                            echo '<div id="select-kala" class="hidden">';
                             echo $this->Form->input('', array (
                                 'type' => 'select',
                                 'label' => 'Valitse kala',
@@ -188,7 +189,7 @@ use Cake\Log\Log;
                             echo '<div id="detail-count" class="hidden">';
                             echo $this->Form->control('', array (
                                 'label' => 'Määrä (kg)',
-                                'id' => 'fish-amount-kg'
+                                'id' => 'kalakg'
                             ));
 
                             /*echo $this->Form->control('koentakerrat', array (
@@ -201,29 +202,31 @@ use Cake\Log\Log;
                                 'id' => 'resource-count'
                             ));
                             */
-                            echo "<a id='add' class='btn btn-default'><i class='fa fa-plus' aria-hidden='true'></i></a></div>";
+                        ?>
+                            <a id='add' class='btn btn-default'><i class='fa fa-plus' aria-hidden='true'></i></a></div>
                             
-                            echo "</div>";
-
-                            echo "<div id='catch-table' class='table-responsive'>";
-                                echo "<table class='table table-hover '>";
-                                    echo "<thead>"
-                                            . "<tr>"
-                                                . "<th>Pyydys</th>"
-                                                . "<th>Kala</th>"
-                                                . "<th>Määrä (kg)</th>"
-                                                . "<th></th>"
-                                            . "</tr> "
-                                        . "</thead>";
-                                    echo "<tbody id='catch-row'>"
-                                        . "</tbody>";                                    
-                                echo "</table>";
-                            echo "</div>";
-                            
+                            </div>
+                        
+                            <div class='table-responsive'>
+                                <table class='table table-hover '>
+                                        <thead>
+                                            <tr>
+                                            <th>Pyydys</th>
+                                            <th>Kala</th>
+                                            <th>Määrä (kg)</th>
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id='catch-table'>
+                                        </tbody>                                  
+                                </table>
+                            </div>
+                        <?php 
                             
                         }
                         elseif ($kysymystyyppi == 6) {
                             echo $this->Form->hidden('kysymys[]', ['value'=> $otsikko . '@' . $kysymystyyppi . '@' . $kysymysid]);
+                            echo $this->Form->hidden('', ['value'=> $kysymysid, 'id' => 'kysymysid-type-6']);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             
                             echo $this->Form->input('', array (
@@ -232,8 +235,8 @@ use Cake\Log\Log;
                                 'label' => 'Valitse pyydys',
                                 'empty' => 'Valitse',
                                 'options' => $resurssit_pyydykset,
-                            ));     
-                            
+                            ));   
+
                             echo $this->Form->control('', array (
                                 'type' => 'number',
                                 'id' => 'tries',

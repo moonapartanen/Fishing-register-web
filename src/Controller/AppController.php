@@ -31,10 +31,18 @@ class AppController extends Controller
     {
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
+            'authenticate' => [
+                'Form' => [
+                    'passwordHasher' => [
+                        'className' => 'Legacy',
+                    ]
+                ]
+            ],            
             'loginAction' => [
                 'controller' => 'Users',
                 'action' => 'login'
             ],
+            'authError' => 'Kirjaudu sisään täyttääksesi lomake',
             'unauthorizedRedirect' => $this->referer() // If unauthorized, return them to page they were just on
         ]);
     }

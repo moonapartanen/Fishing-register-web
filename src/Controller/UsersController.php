@@ -29,7 +29,7 @@ class UsersController extends AppController
                     $this->Auth->logout();
                 }
             } else {
-                $this->Flash->error('Käyttäjätunnus tai salasana on väärä');
+                $this->Flash->error('Väärä käyttäjätunnus tai salasana');
             }
         }
     }
