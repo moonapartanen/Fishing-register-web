@@ -46,9 +46,9 @@ $(document).ready(function() {
         maara = $("#kalakg").val();
 
         $("#catch-table").append("<tr id='catch-row-" + index + "'>"
-                + "<td><input type='hidden' name='vastaus[" + kysymysid + "]' value='" + pyydysid + "' class='pyydys'>" + pyydys + "</td>" 
-                + "<td><input type='hidden' name='vastaus[" + kysymysid + "]' value='" + kalaid + "' class='kala'>" + kala + "</td>" 
-                + "<td><input type='hidden' name='vastaus[" + kysymysid + "][maara]' value='" + maara + "'>" + maara + "</td>"
+                + "<td><input type='hidden' name='vastaus[" + kysymysid + "][" + pyydysid  + "][" + kalaid + "]' value='"  + maara + "' class='pyydys'>" + pyydys + "</td>" 
+                + "<td>" + kala + "</td>" 
+                + "<td>" + maara + "</td>"
                 + "<td><a class='remove-catch-btn' data-row='" + index + "'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td></tr>");
         index++;
         
