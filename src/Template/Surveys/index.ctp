@@ -255,24 +255,25 @@ use Cake\Log\Log;
                                 'label' => "Pyydysten määrä per pyyntipäivä"
                                 
                             ));    
+                            ?>
+
+                            <a id='add-trap' class='btn btn-default'><i class='fa fa-plus' aria-hidden='true'></i></a></div>
                             
-                            echo "<a id='add-trap' class='btn btn-default'><i class='fa fa-plus' aria-hidden='true'></i></a></div>";
-                            
-                            echo "<div id='trap-table' class='table-responsive'>";
-                                echo "<table class='table table-hover '>";
-                                    echo "<thead>"
-                                            . "<tr>"
-                                                . "<th>Pyydys</th>"
-                                                . "<th>Koentakerrat</th>"
-                                                . "<th>Pyydysten määrä/päivä</th>"
-                                                . "<th></th>"
-                                            . "</tr> "
-                                        . "</thead>";
-                                    echo "<tbody id='trap-row'>"
-                                        . "</tbody>";                                    
-                                echo "</table>";
-                            echo "</div>";                            
-                            
+                            <div id='trap-table' class='table-responsive'>
+                                <table class='table table-hover '>
+                                    <thead>
+                                        <tr>
+                                            <th>Pyydys</th>
+                                            <th>Koentakerrat</th>
+                                            <th>Pyydysten määrä/päivä</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id='trap-row'></tbody>                                  
+                                </table>
+                            </div>
+
+                            <?php
                             
                         }
                         elseif ($kysymystyyppi == 7) {
@@ -284,6 +285,17 @@ use Cake\Log\Log;
                         elseif ($kysymystyyppi == 8) {
                             echo $this->Form->hidden('kysymys[]', ['value'=> $otsikko . '@' . $kysymystyyppi . '@' . $kysymysid]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
+                            echo "<br>";
+                            foreach ($resurssit_kalat as $id => $kala) :
+                                echo $this->Form->label($kysymysnro, $kala, ['style' => 'font-weight: 500;']);
+                                $options = ['Yleistynyt' => 'Yleistynyt', 'Vähentynyt' => 'Vähentynyt', 'Ei muutosta' => 'Ei muutosta'];
+                                echo $this->Form->radio('vastaus[' . $kysymysid . "][" . $id . ']', $options, []);
+                            endforeach;
+                            echo "</div>";                            
+                        }
+                        elseif ($kysymystyyppi == 9) {
+                            echo $this->Form->hidden('kysymys[]', ['value'=> $otsikko . '@' . $kysymystyyppi . '@' . $kysymysid]);
+                            echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             $options = ['Haittaa merkittävästi' => 'Haittaa merkittävästi', 'Haittaa kohtalaisesti' => 'Haittaa kohtalaisesti', 'Ei haittaa' => 'Ei haittaa'];
                             $array_index = 0;
                             foreach ($resurssit_haittatekijat as $tekija => $index) :
@@ -291,27 +303,17 @@ use Cake\Log\Log;
                                 echo $this->Form->radio('vastaus[' . $kysymysid . ']' . '[' . $array_index . ']' . '[' . $tekija . ']', $options, []);
                                 $array_index++;
                             endforeach;
-                            echo "</div>";
-                            
-                        }
-                        elseif ($kysymystyyppi == 9) {
-                            echo $this->Form->hidden('kysymys[]', ['value'=> $otsikko . '@' . $kysymystyyppi . '@' . $kysymysid]);
-                            echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
-                            echo "<br>";
-                            foreach ($resurssit_kalat as $id => $kala) :
-                                echo $this->Form->label($kysymysnro, $kala, ['style' => 'font-weight: 500;']);
-                                $options = ['Yleistynyt' => 'Yleistynyt', 'Vähentynyt' => 'Vähentynyt', 'Ei muutosta' => 'Ei muutosta'];
-                                echo $this->Form->radio('vastaus[' . $kysymysid . "][" . $id . ']', $options, []);
-                            endforeach;
-                            echo "</div>";
+                            echo "</div>";                            
                             
                         }
                         elseif ($kysymystyyppi == 10) {
+                            $index = 0;
                             echo $this->Form->hidden('kysymys[]', ['value'=> $otsikko . '@' . $kysymystyyppi . '@' . $kysymysid]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             $options = ['Merkittävä' => 'Merkittävä', 'Kohtalainen' => 'Kohtalainen', 'Ei merkitystä' => 'Ei merkitystä', 'Ei tietoa' => 'Ei tietoa'];
-                            echo $this->Form->radio('vastaus[' . $kysymysid . ']', $options, []);
-                            echo $this->Form->control('vastaus[' . $kysymysid . ']', array (
+                            echo $this->Form->radio('vastaus[' . $kysymysid . '][' . $index . ']', $options, []);
+                            $index++;
+                            echo $this->Form->control('vastaus[' . $kysymysid . '][' . $index . ']', array (
                                 'type' => 'textarea',   
                                 'label' => 'Lisätietoja',
                             ));                             

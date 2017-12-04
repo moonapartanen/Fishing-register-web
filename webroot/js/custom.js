@@ -74,11 +74,11 @@ $(document).ready(function() {
         koentakerrat = $("#tries").val();
         pyydysmaara = $("#trapcount").val();
 
-        $("#trap-row").append("<tr id='trap-row-" + indexx + "'><td>"
-                + "<input type='hidden' name='vastaus[" + kysymysid + "][" + pyydysid +  "]' value='" + pyydysid + "'>" + pyydys + "</td><td>" 
-                + "<input type='hidden' name='vastaus[" + kysymysid + "][" + pyydysid +  "]' value='" + koentakerrat + "'>" + koentakerrat + "</td><td>" 
-                + "<input type='hidden' name='vastaus[" + kysymysid + "][" + pyydysid +  "]' value='" + pyydysmaara + "'>" + pyydysmaara + "</td><td>"
-                + "<a class='remove-trap-btn' data-row='" + indexx + "'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td>");
+        $("#trap-row").append("<tr id='trap-row-" + indexx + "'>"
+                + "<td><input type='hidden' name='vastaus[" + kysymysid + "][" + pyydysid  + "][" + koentakerrat + "]' value='"  + pyydysmaara + "' class='pyydys'>" + pyydys + "</td>" 
+                + "<td>" + koentakerrat + "</td>" 
+                + "<td>" + pyydysmaara + "</td>"
+                + "<td><a class='remove-trap-btn' data-row='" + indexx + "'><i class='fa fa-trash-o' aria-hidden='true'></i></a></td>");
         indexx++;          
 
         $(".remove-trap-btn").on("click", function () {

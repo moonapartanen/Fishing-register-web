@@ -37,7 +37,7 @@ class FormController extends AppController
                 $kysymys = explode('@', $kysymysotsikko);
 
                     if ($kysymys[1] == 1 || $kysymys[1] == 2 || $kysymys[1] == 3) {
-                        /*
+                        
                         $vastaus_single = $vastauksetTable->newEntity();
 
                         foreach ($this->request->data['vastaus'] as $id => $vastaus) {
@@ -52,9 +52,53 @@ class FormController extends AppController
                         $vastaus_single->vastauspvm = date('Y-m-d H:i:s');
                         
                         $vastauksetTable->save($vastaus_single); 
-                        */
+                        
                     } 
                     elseif($kysymys[1] == 8) {
+
+                        /*
+                        $vastauksetTable = TableRegistry::get('Vastaukset');
+
+                        $vastaus_single = $vastauksetTable->newEntity();
+                        $vastaus_single->kysymys_id = $kysymys[2];
+                        $vastaus_single->vastauspvm = date('Y-m-d H:i:s');
+
+                        $vastauksetTable->save($vastaus_single); 
+                        $lastVastausid = $vastaus_single->id;
+
+                        //$this->log($lastVastausid, 'debug');
+                        foreach ($this->request->data['vastaus'] as $id => $vastaus) {
+
+                            if ($id == $kysymys[2]) {
+                                if (is_array($vastaus)) {
+                                    foreach ($vastaus as $index => $value) {
+                                        //$this->log($value, 'debug');
+                                        // loopataan kysymys_kentat
+                                        $KysymysKentatTable = TableRegistry::get('Kysymys_kentat');
+                                        $vastaus_single = $KysymysKentatTable->newEntity();
+                                        $vastaus_single->kysymys_id = $kysymys[2];
+                                        $vastaus_single->sarake_resurssi_id = $index;
+                                        $KysymysKentatTable->save($vastaus_single); 
+                                        $lastKysymyskenttaid = $vastaus_single->id;
+                                        //$this->log($value, 'debug');
+                                        //$this->log($index, 'debug');
+                                        $vastaus_kentatTable = TableRegistry::get('Vastaus_kentat');
+                                        $vastaus_single = $vastaus_kentatTable->newEntity();
+                                        $vastaus_single->kysymys_kentta_id  = $lastKysymyskenttaid;
+                                        $vastaus_single->vastaus_id  = $lastVastausid;
+                                        $vastaus_single->vastaus  = $value;
+
+                                        $vastaus_kentatTable->save($vastaus_single); 
+                                    }
+                                }
+                            }
+                            
+                        }
+                        */
+
+                    }
+                    elseif ($kysymys[1] == 9) {
+                        /*
                         $vastauksetTable = TableRegistry::get('Vastaukset');
 
                         $vastaus_single = $vastauksetTable->newEntity();
@@ -72,12 +116,87 @@ class FormController extends AppController
                                     foreach ($vastaus as $v) {
                                         if (is_array($v)) {
                                             foreach ($v as $index => $value) {
-                                                $this->log($value, 'debug');
+                                                //$this->log($value, 'debug');
                                                 // loopataan kysymys_kentat
                                                 $KysymysKentatTable = TableRegistry::get('Kysymys_kentat');
                                                 $vastaus_single = $KysymysKentatTable->newEntity();
                                                 $vastaus_single->kysymys_id = $kysymys[2];
+                                                $vastaus_single->rivi_resurssi_id = $index;
+                                                $KysymysKentatTable->save($vastaus_single); 
+                                                $lastKysymyskenttaid = $vastaus_single->id;
+                                                //$this->log($value, 'debug');
+                                                //$this->log($index, 'debug');
+                                                $vastaus_kentatTable = TableRegistry::get('Vastaus_kentat');
+                                                $vastaus_single = $vastaus_kentatTable->newEntity();
+                                                $vastaus_single->kysymys_kentta_id  = $lastKysymyskenttaid;
+                                                $vastaus_single->vastaus_id  = $lastVastausid;
+                                                $vastaus_single->vastaus  = $value;
+    
+                                                $vastaus_kentatTable->save($vastaus_single);
+                                                
+                                            }
+                                        }           
+                                    }
+                                }
+                            }
+                            
+                        }
+                        */
+
+                    }
+                    elseif ($kysymys[1] == 10) {
+                        $vastauksetTable = TableRegistry::get('Vastaukset');
+
+                        $vastaus_single = $vastauksetTable->newEntity();
+                        $vastaus_single->kysymys_id = $kysymys[2];
+                        $vastaus_single->vastauspvm = date('Y-m-d H:i:s');
+
+                        foreach ($this->request->data['vastaus'] as $id => $vastaus) {
+
+                            if ($id == $kysymys[2]) {
+
+                                if (is_array($vastaus)) {
+                                    foreach ($vastaus as $v) {
+                                        $vastaus_single->vastaus = $v;
+                                        break;
+                                    }
+                                }
+                                
+                            }
+                            
+                        }
+
+                        $vastauksetTable->save($vastaus_single); 
+
+                    }
+                    elseif ($kysymys[1] == 5) {
+                        /*
+                        $vastauksetTable = TableRegistry::get('Vastaukset');
+
+                        $vastaus_single = $vastauksetTable->newEntity();
+                        $vastaus_single->kysymys_id = $kysymys[2];
+                        $vastaus_single->vastauspvm = date('Y-m-d H:i:s');
+
+                        $vastauksetTable->save($vastaus_single); 
+                        $lastVastausid = $vastaus_single->id;
+
+                        foreach ($this->request->data['vastaus'] as $id => $vastaus) {
+
+                            if ($id == $kysymys[2]) {
+                                if (is_array($vastaus)) {
+                                    foreach ($vastaus as $resurssi_id => $v) {
+                                        $this->log($resurssi_id, 'debug');
+
+                                        if (is_array($v)) {
+                                            foreach ($v as $index => $value) {
+                                                $this->log($value . "-" .$index , 'debug');
+                                                // loopataan kysymys_kentat
+                                                
+                                                $KysymysKentatTable = TableRegistry::get('Kysymys_kentat');
+                                                $vastaus_single = $KysymysKentatTable->newEntity();
+                                                $vastaus_single->kysymys_id = $kysymys[2];
                                                 $vastaus_single->sarake_resurssi_id = $index;
+                                                $vastaus_single->rivi_resurssi_id = $resurssi_id;
                                                 $KysymysKentatTable->save($vastaus_single); 
                                                 $lastKysymyskenttaid = $vastaus_single->id;
                                                 //$this->log($index, 'debug');
@@ -97,55 +216,7 @@ class FormController extends AppController
                             }
                             
                         }
-
-                    }
-                    elseif ($kysymys[1] == 9) {
-
-                    }
-                    elseif ($kysymys[1] == 5) {
-                        $vastauksetTable = TableRegistry::get('Vastaukset');
-
-                        $vastaus_single = $vastauksetTable->newEntity();
-                        $vastaus_single->kysymys_id = $kysymys[2];
-                        $vastaus_single->vastauspvm = date('Y-m-d H:i:s');
-
-                        $vastauksetTable->save($vastaus_single); 
-                        $lastVastausid = $vastaus_single->id;
-
-                        foreach ($this->request->data['vastaus'] as $id => $vastaus) {
-
-                            if ($id == $kysymys[2]) {
-                                if (is_array($vastaus)) {
-                                    foreach ($vastaus as $v) {
-                                        if (is_array($v)) {
-                                            foreach ($v as $index => $value) {
-                                                $this->log($value, 'debug');
-                                                // loopataan kysymys_kentat
-                                                /*
-                                                $KysymysKentatTable = TableRegistry::get('Kysymys_kentat');
-                                                $vastaus_single = $KysymysKentatTable->newEntity();
-                                                $vastaus_single->kysymys_id = $kysymys[2];
-                                                $vastaus_single->sarake_resurssi_id = $index;
-                                                $vastaus_single->rivi_resurssi_id = $id;
-                                                $KysymysKentatTable->save($vastaus_single); 
-                                                $lastKysymyskenttaid = $vastaus_single->id;
-                                                //$this->log($index, 'debug');
-                                                //$this->log($index, 'debug');
-                                                $vastaus_kentatTable = TableRegistry::get('Vastaus_kentat');
-                                                $vastaus_single = $vastaus_kentatTable->newEntity();
-                                                $vastaus_single->kysymys_kentta_id  = $lastKysymyskenttaid;
-                                                $vastaus_single->vastaus_id  = $lastVastausid;
-                                                $vastaus_single->vastaus  = $value;
-    
-                                                $vastaus_kentatTable->save($vastaus_single);
-                                                */
-                                            }
-                                        }           
-                                    }
-                                }
-                            }
-                            
-                        }
+                        */
                     }
 
                 
