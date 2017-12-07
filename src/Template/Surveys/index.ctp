@@ -65,102 +65,104 @@ use Cake\Log\Log;
                             
                         }
                         elseif ($kysymystyyppi == 4) {
+                            $monthIndex = 0;
                             echo $this->Form->hidden('kysymys[]', ['value'=> $otsikko . '@' . $kysymystyyppi . '@' . $kysymysid]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][tammikuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Tammikuu"
                             ));
-                            
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][helmikuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Helmikuu"
                                 
                             ));
-
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][maaliskuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Maaliskuu"
                                 
                             ));
-
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][huhtikuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Huhtikuu"
                                 
                             ));
-
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][toukokuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Toukokuu"
                                 
                             ));
-
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][kesäkuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Kesäkuu"
                                 
                             ));
-
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][heinäkuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Heinäkuu"
                                 
                             ));
-
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][elokuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Elokuu"
                                 
                             ));
-
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][syyskuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Syyskuu"
                                 
                             ));
-
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][lokakuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' =>  "Lokakuu"
                                 
                             ));
-
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][marraskuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Marraskuu"                                
                             ));
-
-                            echo $this->Form->control('vastaus[' . $kysymysid. ']', array (
+                            $monthIndex++;
+                            echo $this->Form->control('vastaus[' . $kysymysid. '][joulukuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
                                 'label' => "Joulukuu"
                                 
                             ));
-                         
+                            
                             echo "</div>";
                             
                         }
