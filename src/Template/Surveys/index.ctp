@@ -46,6 +46,7 @@ use Cake\Log\Log;
                                 'type' => 'textarea',
                                 'label' => false,
                                 'class' => 'label-bold',
+                                'required' => true
                                 
                             )); 
                             echo "</div>";
@@ -54,13 +55,13 @@ use Cake\Log\Log;
                             echo $this->Form->hidden('kysymys[]', ['value'=> $otsikko . '@' . $kysymystyyppi . '@' . $kysymysid]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             $options = ['Kyllä' => 'Kyllä', 'Ei' => 'Ei'];
-                            echo $this->Form->radio('vastaus[' . $kysymysid . ']', $options, []);
+                            echo $this->Form->radio('vastaus[' . $kysymysid . ']', $options, ['required' => true]);
                             echo "</div>";
                         }
                         elseif ($kysymystyyppi == 3) {
                             echo $this->Form->hidden('kysymys[]', ['value'=> $otsikko . '@' . $kysymystyyppi . '@' . $kysymysid]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
-                            echo $this->Form->radio('vastaus[' . $kysymysid . ']', $kalastusalueet, []);
+                            echo $this->Form->radio('vastaus[' . $kysymysid . ']', $kalastusalueet, ['required' => true]);
                             echo "</div>";
                             
                         }
@@ -73,14 +74,16 @@ use Cake\Log\Log;
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Tammikuu"
+                                'label' => "Tammikuu",
+                                'required' => true
                             ));
                             $monthIndex++;
                             echo $this->Form->control('vastaus[' . $kysymysid. '][helmikuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Helmikuu"
+                                'label' => "Helmikuu",
+                                'required' => true
                                 
                             ));
                             $monthIndex++;
@@ -88,7 +91,8 @@ use Cake\Log\Log;
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Maaliskuu"
+                                'label' => "Maaliskuu",
+                                'required' => true
                                 
                             ));
                             $monthIndex++;
@@ -96,7 +100,8 @@ use Cake\Log\Log;
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Huhtikuu"
+                                'label' => "Huhtikuu",
+                                'required' => true
                                 
                             ));
                             $monthIndex++;
@@ -104,7 +109,8 @@ use Cake\Log\Log;
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Toukokuu"
+                                'label' => "Toukokuu",
+                                'required' => true
                                 
                             ));
                             $monthIndex++;
@@ -112,7 +118,8 @@ use Cake\Log\Log;
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Kesäkuu"
+                                'label' => "Kesäkuu",
+                                'required' => true
                                 
                             ));
                             $monthIndex++;
@@ -120,7 +127,8 @@ use Cake\Log\Log;
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Heinäkuu"
+                                'label' => "Heinäkuu",
+                                'required' => true
                                 
                             ));
                             $monthIndex++;
@@ -128,7 +136,8 @@ use Cake\Log\Log;
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Elokuu"
+                                'label' => "Elokuu",
+                                'required' => true
                                 
                             ));
                             $monthIndex++;
@@ -136,7 +145,8 @@ use Cake\Log\Log;
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Syyskuu"
+                                'label' => "Syyskuu",
+                                'required' => true
                                 
                             ));
                             $monthIndex++;
@@ -144,7 +154,8 @@ use Cake\Log\Log;
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' =>  "Lokakuu"
+                                'label' =>  "Lokakuu",
+                                'required' => true
                                 
                             ));
                             $monthIndex++;
@@ -152,14 +163,16 @@ use Cake\Log\Log;
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Marraskuu"                                
+                                'label' => "Marraskuu",
+                                'required' => true                           
                             ));
                             $monthIndex++;
                             echo $this->Form->control('vastaus[' . $kysymysid. '][joulukuu]', array (
                                 'type' => 'number',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Joulukuu"
+                                'label' => "Joulukuu",
+                                'required' => true
                                 
                             ));
                             
@@ -177,6 +190,7 @@ use Cake\Log\Log;
                                 'label' => 'Valitse pyydys',
                                 'empty' => 'Valitse',
                                 'options' => $resurssit_pyydykset,
+                                'required' => true
                             ));
                             
                             echo '<div id="select-kala" class="hidden">';
@@ -185,25 +199,16 @@ use Cake\Log\Log;
                                 'label' => 'Valitse kala',
                                 'empty' => 'Valitse',
                                 'options' => $resurssit_kalat,
+                                'required' => true
                             ));              
                             echo "</div>";
                             
                             echo '<div id="detail-count" class="hidden">';
                             echo $this->Form->control('', array (
                                 'label' => 'Määrä (kg)',
-                                'id' => 'kalakg'
+                                'id' => 'kalakg',
+                                'required' => true
                             ));
-
-                            /*echo $this->Form->control('koentakerrat', array (
-                                'label' => 'Koentakertojen lukumäärä',
-                                'id' => 'tries-count'
-                            ));
-
-                            echo $this->Form->control('pyydystenmaara', array (
-                                'label' => 'Pyydysten määrä',
-                                'id' => 'resource-count'
-                            ));
-                            */
                             
                         ?>
                             <a id='add' class='btn btn-default'><i class='fa fa-plus' aria-hidden='true'></i></a></div>
@@ -238,6 +243,7 @@ use Cake\Log\Log;
                                 'label' => 'Valitse pyydys',
                                 'empty' => 'Valitse',
                                 'options' => $resurssit_pyydykset,
+                                'required' => true
                             ));   
 
                             echo $this->Form->control('', array (
@@ -245,7 +251,8 @@ use Cake\Log\Log;
                                 'id' => 'tries',
                                 'max' => 31,
                                 'min' => 0,
-                                'label' => "Koentakertojen lukumäärä"
+                                'label' => "Koentakertojen lukumäärä",
+                                'required' => true
                                 
                             ));
 
@@ -254,7 +261,8 @@ use Cake\Log\Log;
                                 'id' => 'trapcount',
                                 'max' => 50,
                                 'min' => 1,
-                                'label' => "Pyydysten määrä per pyyntipäivä"
+                                'label' => "Pyydysten määrä per pyyntipäivä",
+                                'required' => true
                                 
                             ));    
                             ?>
@@ -291,7 +299,7 @@ use Cake\Log\Log;
                             foreach ($resurssit_kalat as $id => $kala) :
                                 echo $this->Form->label($kysymysnro, $kala, ['style' => 'font-weight: 500;']);
                                 $options = ['Yleistynyt' => 'Yleistynyt', 'Vähentynyt' => 'Vähentynyt', 'Ei muutosta' => 'Ei muutosta'];
-                                echo $this->Form->radio('vastaus[' . $kysymysid . "][" . $id . ']', $options, []);
+                                echo $this->Form->radio('vastaus[' . $kysymysid . "][" . $id . ']', $options, ['required' => true]);
                             endforeach;
                             echo "</div>";                            
                         }
@@ -302,7 +310,7 @@ use Cake\Log\Log;
                             $array_index = 0;
                             foreach ($resurssit_haittatekijat as $tekija => $index) :
                                 echo $this->Form->label($kysymysnro, $index, ['style' => 'font-weight: 500;']);
-                                echo $this->Form->radio('vastaus[' . $kysymysid . ']' . '[' . $array_index . ']' . '[' . $tekija . ']', $options, []);
+                                echo $this->Form->radio('vastaus[' . $kysymysid . ']' . '[' . $array_index . ']' . '[' . $tekija . ']', $options, ['required' => true]);
                                 $array_index++;
                             endforeach;
                             echo "</div>";                            
@@ -313,11 +321,12 @@ use Cake\Log\Log;
                             echo $this->Form->hidden('kysymys[]', ['value'=> $otsikko . '@' . $kysymystyyppi . '@' . $kysymysid]);
                             echo $this->Form->label($kysymysnro, $kysymysnro . ". " . $otsikko, ['class' => "label-bold"]);
                             $options = ['Merkittävä' => 'Merkittävä', 'Kohtalainen' => 'Kohtalainen', 'Ei merkitystä' => 'Ei merkitystä', 'Ei tietoa' => 'Ei tietoa'];
-                            echo $this->Form->radio('vastaus[' . $kysymysid . '][' . $index . ']', $options, []);
+                            echo $this->Form->radio('vastaus[' . $kysymysid . '][' . $index . ']', $options, ['required' => true]);
                             $index++;
                             echo $this->Form->control('vastaus[' . $kysymysid . '][' . $index . ']', array (
                                 'type' => 'textarea',   
                                 'label' => 'Lisätietoja',
+                                'required' => true
                             ));                             
                             echo "</div>";
                             
